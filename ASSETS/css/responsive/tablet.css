@@ -1,0 +1,166 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ajustes gerais */
+    .interface {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    /* Menu */
+    .menu-mobile {
+        width: 90%;
+        max-width: 700px;
+        height: 45px;
+    }
+
+    .menu-mobile ul {
+        gap: 30px;
+    }
+
+    /* Seção Home */
+    #home {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .img-topo {
+        margin-top: 0;
+    }
+
+    .container-bolha {
+        width: 180px;
+        height: 180px;
+    }
+
+    .informacao {
+        margin-top: 0;
+        width: 50%;
+        align-items: flex-start;
+    }
+
+    .nome {
+        text-align: left;
+    }
+
+    .frase p {
+        text-align: left;
+    }
+
+    .button {
+        flex-direction: row;
+    }
+
+    /* Habilidades */
+    .habilidades {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .front-end, .ui-ux, .design {
+        width: 220px;
+        min-height: 280px;
+    }
+
+    /* Projetos */
+    #projetos-portfolio {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .container-projetos-1, .container-projetos-2 {
+        width: 320px;
+    }
+
+    /* Sobre Mim */
+    .descricao {
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .designer-grafica {
+        margin-left: 150px;
+        margin-top: 70px;
+    }
+
+    .brumadinho {
+        margin-right: 50px;
+        margin-top: 180px;
+    }
+
+    .desen-web {
+        margin-left: -250px;
+        margin-top: 140px;
+    }
+
+    .imagem-ativa {
+        width: 500px;
+    }
+
+    /* Tecnologias */
+    .tecnologias {
+        height: 350px;
+    }
+
+    .tec-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tec-img img {
+        width: 60px;
+    }
+
+    /* Formulário */
+    #container-formulario {
+        width: 400px;
+        height: 550px;
+    }
+
+    /* Footer */
+    .icon-link {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    /* Ajustes específicos para orientação retrato */
+    @media (orientation: portrait) {
+        #home {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .informacao {
+            align-items: center;
+            width: 80%;
+        }
+
+        .nome, .frase p {
+            text-align: center;
+        }
+
+        .habilidades {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    /* Ajustes específicos para orientação paisagem */
+    @media (orientation: landscape) {
+        #home {
+            margin-top: 60px;
+        }
+
+        .container-bolha {
+            width: 200px;
+            height: 200px;
+        }
+
+        .front-end, .ui-ux, .design {
+            width: 250px;
+        }
+    }
+}

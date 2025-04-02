@@ -1,0 +1,63 @@
+:root {
+    --cor1: #f06adb;
+    --cor2: #c24ff0;
+    --cor3: #ffd893;
+    --cor4: #292929;
+    --cor5: #7c7a7d;
+    --cor6: #2E2E2E;
+    --cor7: #ffffff;
+    --cor9:#10041D;
+  
+  
+    --font-family-roboto: "Roboto", sans-serif;
+    --font-family-quik: "Quicksand", sans-serif;
+    --font-family-mono: "Roboto Mono", monospace;
+    --font-family-codec: "Source Code Pro", serif;
+  }
+
+
+
+  .fundo-titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 130px;
+    
+
+    
+    
+}
+
+  .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(-45deg, #ff1e56, #6a11cb, #fc25f1);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: moverDegrade 3s infinite linear;
+        font-family: var(--font-family-quik);
+        margin: 80px;
+        text-align: center;
+
+        
+        
+    }
+
+    @keyframes moverDegrade {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+  
+
+    
+  
+  
+ 

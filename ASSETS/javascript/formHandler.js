@@ -35,3 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 });
+
+// Adicione isto ao seu formHandler.js para debug:
+console.log("Enviando para o Firebase:", contato);

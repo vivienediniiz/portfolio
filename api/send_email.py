@@ -1,49 +1,48 @@
-from flask import Flask, request, jsonify
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import json
 import os
 
-app = Flask(__name__)
+def send_email(data):
+    # Configurações do e-mail
+    EMAIL_HOST = "smtp.gmail.com"
+    EMAIL_PORT = 587
+    EMAIL_USER = "viviennydiniz@gmail.com"  # Substitua pelo seu e-mail
+    EMAIL_PASSWORD = "tudoposso"  # Substitua pela senha gerada
 
-@app.route("/api/send_email", methods=["POST"])
-def send_email():
-    data = request.json
-    nome = data.get("nome")
-    email = data.get("email")
-    telefone = data.get("telefone")
-    mensagem = data.get("mensagem")
-
-    # Configuração do e-mail
-    EMAIL_USER = os.getenv("EMAIL_USER")
-    EMAIL_PASS = os.getenv("EMAIL_PASS")
-    DESTINATARIO = os.getenv("EMAIL_DEST")
-
+    # Criar mensagem de e-mail
     msg = MIMEMultipart()
     msg["From"] = EMAIL_USER
-    msg["To"] = DESTINATARIO
-    msg["Subject"] = "Novo Contato do Site"
+    msg["To"] = "viviennydiniz@gmail.com"  # Pode ser o mesmo ou outro e-mail para receber
+    msg["Subject"] = "Novo Contato do Formulário"
 
-    corpo_email = f"""
-    <h2>Novo Contato Recebido</h2>
-    <p><strong>Nome:</strong> {nome}</p>
-    <p><strong>Email:</strong> {email}</p>
-    <p><strong>Telefone:</strong> {telefone}</p>
-    <p><strong>Mensagem:</strong> {mensagem}</p>
+    # Corpo do e-mail
+    body = f"""
+    Nome: {data['nome']}
+    E-mail: {data['email']}
+    Telefone: {data['telefone']}
+    Mensagem: {data['mensagem']}
     """
-
-    msg.attach(MIMEText(corpo_email, "html"))
+    msg.attach(MIMEText(body, "plain"))
 
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.starttls()
-            server.login(EMAIL_USER, EMAIL_PASS)
-            server.sendmail(EMAIL_USER, DESTINATARIO, msg.as_string())
-
-        return jsonify({"mensagem": "E-mail enviado com sucesso!"}), 200
+        # Conectar ao servidor SMTP do Gmail
+        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
+        server.starttls()
+        server.login(EMAIL_USER, EMAIL_PASSWORD)
+        server.sendmail(EMAIL_USER, msg["To"], msg.as_string())
+        server.quit()
+        return {"status": "success", "message": "E-mail enviado com sucesso!"}
     except Exception as e:
-        return jsonify({"erro": str(e)}), 500
+        return {"status": "error", "message": str(e)}
 
-
+# Teste local
 if __name__ == "__main__":
-    app.run(debug=True)
+    fake_data = {
+        "nome": "Teste",
+        "email": "teste@email.com",
+        "telefone": "123456789",
+        "mensagem": "Isso é um teste!"
+    }
+    print(send_email(fake_data))

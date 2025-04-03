@@ -9,7 +9,7 @@ document.getElementById("meuFormulario").addEventListener("submit", async functi
     };
 
     try {
-        let response = await fetch("/api/send_email.py", {
+        let response = await fetch("/api/email", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

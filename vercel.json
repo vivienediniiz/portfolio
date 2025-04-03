@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/email.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/email", "dest": "api/email.py" }
+  ]
+}

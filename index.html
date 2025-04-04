@@ -376,7 +376,10 @@
        
  <div id="container-formulario">
     <h2>Entre em Contato</h2>
-    <form id="meuFormulario">
+    <form id="meuFormulario" name="contato" method="POST" data-netlify="true" data-netlify-honeypot="campo-oculto">
+        
+        <input type="hidden" name="form-name" value="contato"> <!-- Importante para Netlify -->
+        
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
         
@@ -388,11 +391,16 @@
         
         <label for="mensagem">Mensagem:</label>
         <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <!-- Campo oculto para proteção contra spam -->
+        <input type="text" name="campo-oculto" style="display: none;">
         
         <button class="btn-4" type="submit">Enviar</button>
     </form>
+
     <div id="mensagem-status"></div>
 </div>
+
 
 
     <div class="icon-link">
@@ -435,8 +443,8 @@
 
 </div><!--end interface-->
 
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<
+
 
 <script src="/ASSETS/javascript/animation.js"></script>
 <script src="/ASSETS/javascript/efeitos-gerais.js"></script>
@@ -452,7 +460,7 @@
 <script type="module" src="/src/main.tsx"></script>
 <script type="module" src="/ASSETS/javascript/firebase-config.js"></script>
 <script type="module" src="/ASSETS/javascript/formHandler.js"></script>
-<script src="ASSETS/javascript/instaagram.js"></script>
+<script src="/ASSETS/javascript/script.js"></script>
 
 
  

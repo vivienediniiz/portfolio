@@ -1372,6 +1372,8 @@ button:hover:before {
     -webkit-backdrop-filter: blur(7.1px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
     cursor: pointer;
 }
 
@@ -1389,155 +1391,41 @@ button:hover:before {
     padding: 5px;
 }
 
-/* Card Animation */
-.tech-card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: 300px;
-    background: rgba(196, 13, 241, 0.19);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
 
-.tech-card.active {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-}
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    color: #666;
-}
-
-.close-button:hover {
-    background: rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-.card-title {
-    color: #fcfbfb;
-    margin-bottom: 15px;
-    font-size: 24px;
+.tec-img .tooltip {
+    visibility: hidden;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+    color: #fff;
     text-align: center;
-    padding-top: 15px;
-    font-family: var(--font-family-quik);
-}
-
-.card-description {
-    color: #fcfcfc;
-    line-height: 1.6;
-    text-align: center;
-    font-family: var(--font-family-quik);
-}
-
-@keyframes moverDegrade {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-.tecnologias {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 310px;
-    gap: 10px;
-    margin-top: 80px;
-    background: linear-gradient(-45deg, #ff1ebc, #6a11cb, #fc25f1);
-    position: relative;
-}
-
-.titulo-tecnologias {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: linear-gradient(-45deg, #ff1e56, #fafaf8, #fc25f1);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: moverDegrade 3s infinite linear;
-    font-family: var(--font-family-quik);
-    margin: 20px;
-}
-
-.tecnologias-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    gap: 10px;
-}
-
-.tecnologias-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    gap: 10px;
-}
-
-.tec-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    background: rgba(255, 255, 255, 0.19);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.tec-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 4px 30px rgba(0, 0, 0, 0.2);
-    filter: brightness(1.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.tec-img img {
-    width: 60px;
-    height: auto;
+    border-radius: 6px;
     padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posiciona acima da imagem */
+    left: 50%;
+    margin-left: -50px; /* Centraliza o tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tec-img .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tec-img:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Card Animation */

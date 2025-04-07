@@ -814,34 +814,56 @@
     }
     
     .tec-img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: clamp(80px, 15vw, 100px);
-        height: clamp(80px, 15vw, 100px);
-        background: rgba(255, 255, 255, 0.19);
-        border-radius: 10px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.1px);
-        -webkit-backdrop-filter: blur(7.1px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    position: relative;  
+    cursor: pointer;
+}
+
+
+
+.tec-img img {
+    width: 80px;
+    height: auto;
+    padding: 5px;
+}
+
+.tec-img .tooltip {
+    visibility: hidden;
+    width: 80px;
+    background: rgba(255, 255, 255, 0.726);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+    color: #0e0d0e;
+    font-family: var(--font-family-roboto);
     
-    .tec-img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 4px 30px rgba(0, 0, 0, 0.2);
-        filter: brightness(1.2);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-    
-    .tec-img img {
-        width: clamp(60px, 10vw, 80px);
-        height: auto;
-        padding: 5px;
-    }
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    padding: 2px;
+    position: fixed;
+    bottom: 125%; /* Posiciona acima da imagem */
+    left: 50%;
+    margin-left: -50px; /* Centraliza o tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10000;
+}
+
+.tec-img:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
     
     /* Card Animation */
     .tech-card {

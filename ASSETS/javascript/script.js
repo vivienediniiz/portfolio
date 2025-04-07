@@ -1,24 +1,13 @@
-document.getElementById("meuFormulario").addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-        const response = await fetch("/.netlify/functions/form-handler", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-        });
-
-        if (response.ok) {
-            document.getElementById("mensagem-status").textContent = "Formulário enviado com sucesso!";
-            event.target.reset();
-        } else {
-            document.getElementById("mensagem-status").textContent = "Erro ao enviar. Tente novamente!";
-        }
-    } catch (error) {
-        console.error("Erro:", error);
-        document.getElementById("mensagem-status").textContent = "Erro no envio!";
-    }
+document.querySelectorAll('.tec-img').forEach(imgContainer => {
+    const tooltip = imgContainer.querySelector('.tooltip');
+    
+    imgContainer.addEventListener('mousemove', (e) => {
+        // Calcula a posição relativa ao container
+        const rect = imgContainer.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Posiciona o tooltip com offset pequeno
+        tooltip.style.transform = `translate(${x + 5}px, ${y + 5}px)`;
+    });
 });

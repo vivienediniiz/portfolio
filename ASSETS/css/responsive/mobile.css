@@ -7,6 +7,8 @@
     --cor6: #2E2E2E;
     --cor7: #ffffff;
     --cor9: #10041D;
+    --efeito-degrade-texto: 
+    linear-gradient(-45deg, #ff1e56, #6a11cb, #fc25f1);
 
     --font-family-roboto: "Roboto", sans-serif;
     --font-family-quik: "Quicksand", sans-serif;
@@ -620,25 +622,30 @@ button:hover:before {
 
 
 /* PROJETOS */
-.projetos-portfolio {
+#projetos-portfolio {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;   
+    justify-content: center; 
 }
 
 .projeto-descricao-1 {
-    
     gap: 30px;
     width: 100%;
     max-width: 800px;
+    text-align: center;
+    
     
     
 }
 
 .projeto-descricao-2{
     
-    gap: 20px;
+     gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    
+    
     
 }
 
@@ -646,13 +653,30 @@ button:hover:before {
 .projeto-descricao-2 h2 {
     color: #FFF;
     width: 100%;
-    font-size: 1rem;
-    text-align: center;
+    font-size: 0.8rem;
+    text-align: justify;
     font-family: var(--font-family-quik);
     font-weight: 400;
     padding: 20px;
     order: 2; /* Text comes after image */
     position: relative;
+}
+
+#sites, #design{
+    background: var(--novo, linear-gradient(141deg, #F0D 7.69%, #99002F 182.25%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  animation: moverDegrade 3s infinite linear;
+  font-family: var(--font-family-quik);
+  font-size: 1rem;
+
+}
+
+@keyframes moverDegrade {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container-projetos-1, 
@@ -666,25 +690,39 @@ button:hover:before {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
+      /* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.19);
 }
 
-.slides, 
-.slides-2 {
+.slides-1, .slides-2 {
     display: flex;
     width: 100%;
     height: 100%; /* Ocupa 100% da altura do container */
     transition: transform 0.5s ease-in-out;
-
+    
+    
 }
 
-.slides img, 
+.slides-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Alterado de 'cover' para 'contain' para evitar cortes */
+    flex-shrink: 0;
+    padding: 20px;
+}
+
 .slides-2 img {
     width: 100%;
     height: 100%;
     object-fit: contain; /* Alterado de 'cover' para 'contain' para evitar cortes */
     flex-shrink: 0;
+    padding: 20px;
 }
-
 .arrow {
     position: absolute;
     width: 30px;
@@ -743,8 +781,8 @@ button:hover:before {
 
 /* SOBRE MIM */
 #sobre-mim {
-    position: relative;
-    width: 90%;
+    
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -753,14 +791,7 @@ button:hover:before {
     margin-top: 50px;
 }
 
-.background-sobre-mim {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
+
 
 .sobre-mim-tilulo {
     display: flex;
@@ -790,23 +821,57 @@ button:hover:before {
     }
 }
 
-.descricao {
-    width: 100%;
-    height: 350px;
-  
-    margin-top: -5px;
+.descricao-eu{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column; 
+       gap: 50px;
+       
+        
+    }
+
+
+    #typing-quem-sou{
+    color: #f17ffc;
+    font-family: var(--font-family-quik);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 600;
+   }
+
+    #texto-quem-sou-eu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 40px;
+        
+        
+    }
+
+    #texto-quem-sou-eu h2{
+        color: #FFF;
+        font-family: var(--font-family-quik);
+        font-size: 0.8rem;
+        text-align: justify;
+        font-weight: 300;
+
+    }
+
+    .destaque-rosa {
+  color: var(--cor1);
+  font-weight: 600;
 }
 
+.destaque-roxo {
+  color:var(--cor2);
+  font-weight: 600;
+}
 
-
-
-.descricao h2 {
-    font-family: Quicksand;
-    font-weight: 300;
-    font-size: 0.8rem;
-    text-align: justify;
-    color: #ffffff;
-    padding: 20px;
+.italico-rosa {
+  color: var(--cor1);
+  font-style: italic;
+  font-weight: 600;
 }
 
 .sobre-mim01 {
@@ -822,18 +887,20 @@ button:hover:before {
     justify-content: center;
     width: 100%;
     height: auto;
-      margin: 0 auto;
-    overflow: hidden;
+   
+}
+
+.imagens{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2px;
+    margin: 10px;
 }
 
-
 .imagem-ativa{
-    width: 450px;
+    width: 350px;
     height: auto;
+    
 }
 
 .assinatura{

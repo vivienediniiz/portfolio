@@ -35,5 +35,5 @@ function criarCarrossel(containerSelector, slideSelector) {
 }
 
 // Cria carrosséis para cada projeto
-criarCarrossel("#projetos-portfolio-1", ".slides");
+criarCarrossel("#projetos-portfolio-1", ".slides-1");
 criarCarrossel("#projetos-portfolio-2", ".slides-2");

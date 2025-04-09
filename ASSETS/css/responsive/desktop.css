@@ -7,6 +7,8 @@
     --cor6: #2E2E2E;
     --cor7: #ffffff;
     --cor9: #10041D;
+    --efeito-degrade-texto: linear-gradient(-45deg, #ff1e56, #6a11cb, #fc25f1);
+
 
     --font-family-roboto: "Roboto", sans-serif;
     --font-family-quik: "Quicksand", sans-serif;
@@ -72,7 +74,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: clamp(30px, 5vw, 90px);
+        gap: clamp(50px, 50vw, 90px);
         list-style: none;
         margin: 0;
         padding: 0;
@@ -155,8 +157,8 @@
     
     .container-bolha {
         position: relative;
-        width: clamp(250px, 30vw, 310px);
-        height: clamp(250px, 30vw, 310px);
+        width: clamp(250px, 15vw, 310px);
+        height: clamp(250px, 15vw, 310px);
     }
     
     .bolha {
@@ -195,7 +197,7 @@
     .foto-viviene {
         position: absolute;
         z-index: 1;
-        width: 90%;
+        width: 80%;
         height: auto;
     }
     
@@ -223,7 +225,7 @@
     
     #typing-effect {
         font-family: var(--font-family-mono);
-        font-size: clamp(1.2rem, 3vw, 1.7rem);
+        --p-size: clamp(0.8rem, 1.5vw, 1rem);
         color: var(--cor5);
         line-height: 1.5;
     }
@@ -247,7 +249,7 @@
     .frase p {
         color: #A9A8A8;
         font-family: Quicksand;
-        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        --p-size: clamp(0.8rem, 1.5vw, 1rem);
         font-weight: 600;
         margin-top: var(--space-md);
         text-align: left;
@@ -451,9 +453,10 @@
 
 
     /* PROJETOS */
-    .projetos-portfolio {
+    #projetos-portfolio {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 50px;
     
 }
@@ -465,6 +468,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    
     
 
 }
@@ -482,39 +486,77 @@
     width: 600px;
     height: auto;
     font-size: 1rem;
-    text-align: center;
+    text-align: justify;
     font-family: var(--font-family-quik);
     font-weight: 400;
     padding: 20px;
 
 }
+
+#sites, #design{
+    background: var(--novo, linear-gradient(141deg, #F0D 7.69%, #99002F 182.25%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  animation: moverDegrade 3s infinite linear;
+  font-family: var(--font-family-quik);
+  font-size: 1.3rem;
+
+}
+
+@keyframes moverDegrade {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
 .container-projetos-1, .container-projetos-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 300px;
-    height: 300px; /* Definir uma altura fixa para o container */
+    width: 350px;
+    height: 350px; /* Definir uma altura fixa para o container */
     overflow: hidden;
     margin: auto;
     position: relative; /* Adicionado para posicionamento absoluto das setas */
     gap: 20px;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.19);
     
 }
 
-.slides, .slides-2 {
+.slides-1, .slides-2 {
     display: flex;
     width: 100%;
     height: 100%; /* Ocupa 100% da altura do container */
     transition: transform 0.5s ease-in-out;
     
+    
 }
 
-.slides img {
+.slides-1 img {
     width: 100%;
     height: 100%;
     object-fit: contain; /* Alterado de 'cover' para 'contain' para evitar cortes */
     flex-shrink: 0;
+    padding: 30px;
+}
+
+.slides-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Alterado de 'cover' para 'contain' para evitar cortes */
+    flex-shrink: 0;
+    padding: 30px;
 }
 
 
@@ -598,14 +640,7 @@
         margin-top: var(--space-xl);
     }
     
-    .background-sobre-mim {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-    }
+    
     
     .sobre-mim-tilulo {
         display: flex;
@@ -629,77 +664,59 @@
         100% { background-position: 0% 50%; }
     }
     
-    .descricao {
-        width: clamp(300px, 80vw, 700px);
-        height: auto;
-        margin-top: -5px;
+    .descricao-eu{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column; 
+       gap: 40px;
+       
+        
     }
-    
-    #texto-quem-sou-eu h2 {
-        font-size: var(--p-size);
-        color: #f5f6f7;
-    }
-    
-    .cursor-1 {
-        display: inline-block;
-        width: 2px;
-        height: clamp(18px, 3vw, 24px);
-        background-color: #fcfdfd;
-        margin-left: 5px;
-        animation: piscar 0.7s infinite;
-    }
-    
-    @keyframes piscar {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-    }
-    
-    .descricao h2 {
-        font-family: Quicksand;
-        font-weight: 300;
-        font-size: var(--p-size);
-        text-align: justify;
-        color: #ffffff;
-        padding: var(--space-sm);
-    }
-    
-    .sobre-mim01 {
-        display: flex;
-        position: relative;
-    }
-    
-    .designer-grafica, .brumadinho, .desen-web {
-        position: absolute;
+
+    #texto-quem-sou-eu {
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 3;
-        width: clamp(150px, 25vw, 200px);
-        height: clamp(30px, 4vw, 35px);
-        border-radius: 4px;
-        border: 0.5px solid rgba(255, 255, 255, 0.10);
-        background: rgba(255, 255, 255, 0.22);
-        backdrop-filter: blur(1.2px);
+        width: 120vh;
+        gap: 20px;
+    }
+
+    #texto-quem-sou-eu h2{
         color: #FFF;
         font-family: var(--font-family-quik);
-        font-weight: 400;
-        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 300;
+        text-align: justify;
+
     }
+
+    .destaque-rosa {
+  color: var(--cor1);
+  font-weight: 600;
+}
+
+.destaque-roxo {
+  color:var(--cor2);
+  font-weight: 600;
+}
+
+.italico-rosa {
+  color: var(--cor1);
+  font-style: italic;
+  font-weight: 600;
+}
+   
     
-    .designer-grafica {
-        margin-left: clamp(100px, 20vw, 200px);
-        margin-top: clamp(30px, 5vw, 55px);
-    }
+    #typing-quem-sou{
+    color: #f17ffc;
+    font-family: var(--font-family-quik);
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 600;
+   }
     
-    .brumadinho {
-        margin-right: clamp(15px, 3vw, 30px);
-        margin-top: clamp(100px, 15vw, 180px);
-    }
-    
-    .desen-web {
-        margin-left: clamp(-200px, -30vw, -400px);
-        margin-top: clamp(70px, 10vw, 120px);
-    }
     
     .imagens-carrossel {
         display: flex;

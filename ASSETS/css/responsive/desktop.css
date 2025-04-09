@@ -30,7 +30,7 @@
     --space-xl: clamp(3rem, 6vw, 4rem);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px)  {
     /* Reset de base */
     html {
         font-size: var(--base-font-size);

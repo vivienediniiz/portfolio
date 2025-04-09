@@ -15,7 +15,7 @@
     --font-family-codec: "Source Code Pro", serif;
 }
 
-@media (max-width: 767px) {
+@media (min-width:0px) and (max-width: 480px){
     .interface {
         position: relative;
         display: flex;

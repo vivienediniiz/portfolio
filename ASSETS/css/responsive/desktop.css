@@ -30,7 +30,7 @@
     --space-xl: clamp(3rem, 6vw, 4rem);
 }
 
-@media (min-width: 962px)  {
+@media (min-width: 992px) and (max-width:1900px){
     /* Reset de base */
     html {
         font-size: var(--base-font-size);
@@ -457,6 +457,29 @@
         gap: 50px;
     }
 
+
+    .titulo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--h1-size);
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(-45deg, #ff1e56, #6a11cb, #fc25f1);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: moverDegrade 3s infinite linear;
+        font-family: var(--font-family-quik);
+        margin: 50px;
+        text-align: center; 
+    }
+
+    @keyframes moverDegrade {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
     .projeto-descricao-1 {
         display: flex;
         align-items: center;
@@ -616,7 +639,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: var(--h2-size);
+        font-size: var(--h1-size);
         font-weight: bold;
         text-transform: uppercase;
         background: linear-gradient(-45deg, #ff1e56, #6a11cb, #fc25f1);
@@ -723,7 +746,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: var(--h2-size);
+        font-size: var(--h1-size);
         font-weight: bold;
         text-transform: uppercase;
         background: linear-gradient(-45deg, #ff1e56, #fafaf8, #fc25f1);
@@ -868,6 +891,7 @@
         width: 100%;
         height: 100vh;
         flex-wrap: wrap;
+        
     }
     
     #container-formulario {
@@ -1010,10 +1034,10 @@
     .links {
         color: rgb(253, 252, 252);
         text-decoration: none;
-        font-size: clamp(0.8rem, 1.5vw, 1rem);
+        font-size: clamp(1rem, 1.5vw, 1rem);
         transition: color 0.3s;
         font-family: var(--font-family-roboto);
-        line-height: 1.5;
+        line-height: 2;
     }
     
     .links:hover {
@@ -1025,7 +1049,7 @@
     }
     
     .icons-footer img {
-        width: clamp(25px, 4vw, 30px);
+        width: clamp(40px, 4vw, 30px);
         height: auto;
     }
     
@@ -1051,7 +1075,7 @@
         text-align: center;
         color: #807e7e;
         font-family: var(--font-family-quik);
-        font-size: var(--p-size);
+        font-size: var(--base-font-size);
         font-weight: 600;
         z-index: 1;
     }

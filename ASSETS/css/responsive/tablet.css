@@ -479,7 +479,7 @@
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
     }
-    
+
     .projeto-descricao-1 {
         display: flex;
         align-items: center;
@@ -910,7 +910,6 @@
     
     #container-formulario {
         position: relative;
-        padding: var(--space-md); /* espaçamento */
         background: rgba(255, 255, 255, 0.15);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

@@ -65,14 +65,6 @@ efeitoDigitacao({
     textos: ["Olá, meu nome é Viviene Diniz! 💜"] // Apenas um texto
 });
 
-efeitoDigitacao({
-    elementoId: "sites", // Outro elemento HTML
-    textos: ["Projetos Web(Sites, Landing Pages e Biolinks)"] // Apenas um texto
-});
 
-efeitoDigitacao({
-    elementoId: "design", // Outro elemento HTML
-    textos: ["Design para Social Media"] // Apenas um texto
-});
 
 

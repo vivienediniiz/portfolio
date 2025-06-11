@@ -322,12 +322,12 @@ button:hover:before {
 .front-end, .ui-ux, .design {
     display: flex;
     width: 70vw;
-    height: 80vw;
+    height: 60vw;
     padding: 10px 18px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 1px;
     flex-shrink: 0;
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.12);
@@ -395,12 +395,6 @@ button:hover:before {
     left: 100%;
 }
 
-.icons-habilidades{
-    margin-top: 30px;
-    width: 40px;
-    height: auto;
-}
-
 
 
 .front-end h1, .design h1, .ui-ux h1 {
@@ -443,6 +437,7 @@ button:hover:before {
     flex-direction: column;
     align-items: center;   
     justify-content: center; 
+    
     
 }
 
@@ -503,6 +498,8 @@ button:hover:before {
     width: 100%;
     max-width: 800px;
     text-align: center;
+    
+    margin-bottom: 80px;
     
    
      
@@ -626,12 +623,14 @@ button:hover:before {
 /* SOBRE MIM */
 #sobre-mim {
     width: 100%;
-    height: 100vw;
+    height: 31 0vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 0;
+    background-color: rgb(255, 255, 255);
+    
     
     
 }
@@ -644,6 +643,7 @@ button:hover:before {
     justify-content: center;
     font-size: 1.8rem;
     font-weight: bold;
+    margin-top: 40px;
     text-transform: uppercase;
     background: linear-gradient(-45deg, #ff1e56, #6a11cb, #fc25f1);
     background-size: 300% 300%;
@@ -651,7 +651,6 @@ button:hover:before {
     -webkit-text-fill-color: transparent;
     animation: moverDegrade 3s infinite linear;
     font-family: var(--font-family-quik);
-    margin-top: 120px;
 }
 
 @keyframes moverDegrade {
@@ -667,11 +666,11 @@ button:hover:before {
 }
 
 .img-topo {
-    
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20rem;
+    width: 100%;
     height: 30vh;
     
     
@@ -776,17 +775,17 @@ button:hover:before {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 20px;
+        padding: 0 10px;
         
         
     }
 
     #texto-quem-sou-eu h2{
-        color: #FFF;
+        color: #0e0d0d;
         font-family: var(--font-family-quik);
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-align: justify;
-        font-weight: 300;
+        font-weight: 500;
         padding: 0 20px 0 20px;
 
     }
@@ -838,7 +837,6 @@ button:hover:before {
     width: 100%;
     height: 20rem;
     gap: 10px;
-    margin-top: 80px;
     background: linear-gradient(-45deg, #ff1ebc, #6a11cb, #fc25f1);
     position: relative;
 }
@@ -1018,21 +1016,22 @@ backdrop-filter: blur(10px);
     justify-content: center;
     height: auto;
     padding: 2rem;  
+    background-color: #ffffff;
 }
 
 #container-formulario {
     
     position: relative;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    background: rgba(255, 255, 255, 0.15);
+    padding: 1.9rem;
+    background: linear-gradient(135deg, #be40f0, #dca7f5);
+    background-color: #3615c9;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 250px;
-    height: 420px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 280px;
+    height: 360px;
     overflow: hidden;
 }
 
@@ -1074,19 +1073,18 @@ backdrop-filter: blur(10px);
 /* Título do formulário */
 #container-formulario h2 {
     text-align: center;
-    color: #0a0a0a;
     font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 800;
     font-family: var(--font-family-quik);
     text-transform: uppercase;
-    background: linear-gradient(90deg, #f06adb, #c24ff0, #f8e91d);
+    background: linear-gradient(90deg, #d40bca, #ece9ec, #6609a5);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: moverDegrade 3s infinite linear;
-    font-family: var(--font-family-quik);
     font-style: bold;
+    margin-top: 1px;
+    
 }
 
 /* Estilo do formulário */
@@ -1099,8 +1097,8 @@ backdrop-filter: blur(10px);
 /* Estilo dos labels */
 #container-formulario label {
     font-size: 1rem;
-    color: #fffefe;
-    font-weight: 400;
+    color: #FFF;
+    font-weight: 600;
     font-family: var(--font-family-quik);
     
 }
@@ -1137,43 +1135,41 @@ backdrop-filter: blur(10px);
     margin-bottom: 15px;
 }
 
-.btn-4{
-        font-size: clamp(0.9rem, 2vw, 1.1rem);
-        padding: 0.3em clamp(1.5em, 3vw, 3em);
-        letter-spacing: 0.06em;
-        position: relative;
-        font-family: var(--font-family-quik);
-        text-transform: uppercase;
-        font-weight: 600;
-        border-radius: 2em;
-        overflow: hidden;
-        transition: all 0.3s;
-        line-height: 1.4em;
-        border: 2px solid var(--green, #fd1bb9);
-        background: linear-gradient(to right, rgba(240, 5, 208, 0.1) 1%, transparent 40%, transparent 60%, rgba(253, 27, 159, 0.1) 100%);
-        color: white;
-        box-shadow: inset 0 0 10px rgba(243, 1, 191, 0.4), 0 0 9px 3px rgba(245, 15, 195, 0.1);
-    }
-    
-    .btn-4:hover {
-        color: var(--green, #fd1bb9);
-        box-shadow: inset 0 0 10px rgba(236, 6, 167, 0.6), 0 0 9px 3px rgba(172, 20, 243, 0.2);
-    }
-    
-    .btn-4:before {
-        content: "";
-        position: absolute;
-        left: -4em;
-        width: 4em;
-        height: 100%;
-        top: 0;
-        transition: transform .4s ease-in-out;
-        background: linear-gradient(to right, transparent 1%, rgba(111, 2, 201, 0.1) 40%, rgba(226, 9, 208, 0.1) 60%, transparent 100%);
-    }
-    
-    .btn-4:hover:before{
-        transform: translateX(15em);
-    }
+.custom-btn {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-2 {
+  background: rgb(96,9,240);
+  background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+  border: none;
+  
+}
+.btn-2:before {
+  height: 0%;
+  width: 7px;
+}
+.btn-2:hover {
+  box-shadow:  4px 4px 6px 0 rgba(255, 255, 255, 0.247),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
     
   
 
@@ -1188,7 +1184,7 @@ backdrop-filter: blur(10px);
 
 /* Estilo base para os links */
 .links {
-    color: rgb(253, 252, 252); /* Cor inicial do texto */
+    color: rgb(5, 5, 5); /* Cor inicial do texto */
     text-decoration: none; /* Remove o sublinhado */
     font-size: 16px;
     transition: color 0.3s; /* Suaviza a transição de cor */
@@ -1223,7 +1219,7 @@ backdrop-filter: blur(10px);
     width: 100%;
     height: 20px;
     text-align: center;
-    color: #ffffff;
+    color: #070707;
     font-family: var(--font-family-quik);
     font-size: var(--small-size);
 }

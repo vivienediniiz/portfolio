@@ -56,7 +56,7 @@ function efeitoDigitacao(config) {
 // Aplica o efeito no elemento com id "typing-effect"
 efeitoDigitacao({
     elementoId: "typing-effect", // ID do elemento HTML
-    textos: ["Desenvolvedora Front-End", "Design Gráfica"] // Textos a serem digitados e apagados
+    textos: ["UX/UI Design", "Design Gráfica"] // Textos a serem digitados e apagados
 });
 
 // Aplica o efeito no elemento com id "typing-quem-sou"

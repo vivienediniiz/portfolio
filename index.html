@@ -15,29 +15,102 @@
 <body>
     <div class="interface">
         <!-- Menu Mobile -->
-        <nav class="menu-mobile">
+        <nav class="menu-desktop">
             <ul>
                 <li>
-                    <a href="#home"><img class="icon-mobile" src="ASSETS/icones/fi-sr-home (1).png" alt="Home">Home</a>
+                    <img id="logo" src="ASSETS/icones/logo.png" alt="">
+                </li>
+                <li>
+                    <a href="#home"><img class="icon-desktop" src="ASSETS/icones/fi-sr-home (1).png" alt="Home">Home</a>
                 </li>
                 <li>
                     <a href="#sobre-mim">
-                        <img class="icon-mobile" src="/ASSETS/icones/fi-ss-following.png" alt="Sobre">Sobre
+                        <img class="icon-desktop" src="/ASSETS/icones/fi-ss-following.png" alt="Sobre">Sobre
                     </a>
                 </li>
                 <li>
                     <a href="#projetos-portfolio">
-                        <img class="icon-mobile" src="/ASSETS/icones/fi-ss-playing-cards.png" alt="Projetos">Projetos
+                        <img class="icon-desktop" src="/ASSETS/icones/fi-ss-playing-cards.png" alt="Projetos">Projetos
                     </a>
                 </li>
                 <li>
-                    <a href="#container-formulario">
-                        <img class="icon-mobile" src="/ASSETS/icones/fi-ss-phone-call.png" alt="Contato">Contato
+                    <a href="#tecnologias">
+                        <img class="icon-desktop" src="/ASSETS/icones/fi-ss-phone-call.png" alt="Contato">Tecnologias
                     </a>
+                </li>
+                <li>
+                    <button class="btn-5">Contato</button>
                 </li>
             </ul>
         </nav> <!--end menu-mobile-->
 
+
+
+        <!--MENU MOBILE-->
+        <!-- Botão do Menu Hambúrguer -->
+    <div class="menu-mobile">
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    
+
+    <!-- Backdrop -->
+    <div class="backdrop" id="backdrop"></div>
+
+    <!-- Menu Lateral -->
+    <nav class="sidebar-menu" id="sidebarMenu">
+        <div class="menu-header">
+            <div class="menu-logo">
+                <div class="logo-icon"><img src="ASSETS/icones/logo.png" alt=""></div>
+                <h2>Menu</h2>
+            </div>
+        </div>
+
+        <ul class="menu-items">
+            <li class="menu-item">
+                <a href="#home" class="menu-link">
+                    <div class="menu-icon"><img src="ASSETS/icones/fi-sr-home (1).png" alt=""></div>
+                    <span>Home</span>
+                    <div class="menu-indicator"></div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#sobre" class="menu-link">
+                    <div class="menu-icon"><img src="ASSETS/icones/fi-ss-following.png" alt=""></div>
+                    <span>Sobre</span>
+                    <div class="menu-indicator"></div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#portfolio" class="menu-link">
+                    <div class="menu-icon"><img src="ASSETS/icones/fi-ss-playing-cards.png" alt=""></div>
+                    <span>Portfolio</span>
+                    <div class="menu-indicator"></div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#tecnologia" class="menu-link">
+                    <div class="menu-icon"><img src="/ASSETS/icones/fi-ss-phone-call.png" alt=""></div>
+                    <span>Tecnologia</span>
+                    <div class="menu-indicator"></div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="menu-footer">
+            <div class="social-icons">
+                <div class="social-icon"></div>
+                <div class="social-icon"></div>
+                <div class="social-icon"></div>
+            </div>
+            <p>© 2025 Portfolio</p>
+        </div>
+    </nav>
+
+    </div>
+        
         <main>
             <section id="home" data-aos="zoom-in">
                 
@@ -46,8 +119,14 @@
                         <div class="name">
                             <div class="nome">
                                 <span>&lt;</span>
-                                <span class="nome-texto">Viviene Diniz</span>
-                                <span>/&gt;</span>
+                                <span class="nome-texto">/Viviene Diniz</span>
+                                <span>&gt;</span>
+                               
+
+                               
+                            </div>
+                            <div class="function">                            
+                                <span class="nome-texto">Software Developer</span>          
                             </div>
                         </div>
                         <div class="function">
@@ -55,6 +134,12 @@
                         </div>
                         <div class="frase">
                             <p>Criando expêriencias digitais únicas e <br> memoráveis através de código e design.</p>
+                        </div>
+
+                        <div class="links-home">
+                             <img src="ASSETS/icones/instagram.png" alt="">
+                                <img src="ASSETS/icones/linkdin.png" alt="">
+                                <img src="ASSETS/icones/github.png" alt="">
                         </div>
                         <div class="botao-icons">
                             <div class="button">
@@ -66,9 +151,11 @@
                                 </a>
                             </div>
                         </div>
+                        
                     </div>
-                </div>
+              
             </section>
+            
         </main>
 
         <div class="seta-main">
@@ -97,49 +184,12 @@
         
 
         <!--meus projetos-->
-        <div id="projetos-portfolio">
-            <div class="titulo">Meus Projetos</div>
+        <div class="titulo">Meus Projetos</div>
+        <div id="projetos-portfolio"data-aos="fade-down-left">
             
-            <div class="projeto-descricao-1"data-aos="fade-down-left">    
-                <div id="sites">Projetos Web</div>
-                
-                <h2>
-                    Nesta seção, apresento uma seleção dos meus projetos desenvolvidos para web, incluindo sites institucionais, 
-                    landing pages e biolinks personalizados. Cada trabalho foi pensado para oferecer uma navegação intuitiva, design responsivo e identidade visual alinhada aos objetivos de cada cliente. 
-                    Meu foco é transformar ideias em soluções digitais funcionais e esteticamente atraentes.
-                </h2>
-            </div>
-        
-                <div id="projetos-portfolio-1">
-                    <div class="container-projetos-1" >
-                        <div class="slides-1">
-                            <img src="/ASSETS/imagens/carrossel-2.png" alt="Projeto 1">
-                            <img src="/ASSETS/imagens/carrossel-1.png" alt="Projeto 2">
-                            <img src="/ASSETS/imagens/carrossel-3.png" alt="Projeto 3">
-                        </div>
-                        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
-                        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
-        
-                        <div class="tecnologias-pc">
-                            <div class="css"><img src="/ASSETS/imagens/html5/icons8-html5-480.png" alt="HTML5"></div>
-                            <div class="css"><img src="/ASSETS/imagens/css/icons8-css3-480.png" alt="CSS3"></div>
-                            <div class="css"><img src="/ASSETS/imagens/javascript/icons8-javascript-480.png" alt="JavaScript"></div>
-                            <div class="css"><img src="/ASSETS/imagens/figma/icons8-figma-480.png" alt="Figma"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
-            <div class="projeto-descricao-2" data-aos="fade-down-left">
-                    
-                <div id="design">Design para Social Media</div>
-                   <h2> 
-                    Aqui você encontra alguns dos meus projetos de design gráfico voltados para redes sociais. Criações que combinam estética, 
-                    estratégia e identidade de marca para gerar engajamento e fortalecer a presença digital dos clientes. 
-                    Posts, stories, capas e kits completos desenvolvidos com foco em comunicação visual impactante e coerente.
-                </h2>
-        
-                <div id="projetos-portfolio-2">
+            <div class="projeto-descricao-1">            
+                 <div id="projetos-portfolio-2">
                     <div class="container-projetos-2" >
                         <div class="slides-2">
                             <img src="/ASSETS/imagens/carrossel-2.png" alt="Design 1">
@@ -158,24 +208,71 @@
                     </div>
                 </div>
             </div>
+
+             <div class="projeto-descricao-1">            
+                 <div id="projetos-portfolio-2">
+                    <div class="container-projetos-2" >
+                        <div class="slides-2">
+                            <img src="/ASSETS/imagens/carrossel-2.png" alt="Design 1">
+                            <img src="/ASSETS/imagens/carrossel-1.png" alt="Design 2">
+                            <img src="/ASSETS/imagens/carrossel-3.png" alt="Design 3">
+                        </div>
+                        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+                        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        
+                        <div class="tecnologias-pc">
+                            <div class="css"><img src="/ASSETS/imagens/html5/icons8-html5-480.png" alt="HTML5"></div>
+                            <div class="css"><img src="/ASSETS/imagens/css/icons8-css3-480.png" alt="CSS3"></div>
+                            <div class="css"><img src="/ASSETS/imagens/javascript/icons8-javascript-480.png" alt="JavaScript"></div>
+                            <div class="css"><img src="/ASSETS/imagens/figma/icons8-figma-480.png" alt="Figma"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="projeto-descricao-1">            
+                 <div id="projetos-portfolio-2">
+                    <div class="container-projetos-2" >
+                        <div class="slides-2">
+                            <img src="/ASSETS/imagens/carrossel-2.png" alt="Design 1">
+                            <img src="/ASSETS/imagens/carrossel-1.png" alt="Design 2">
+                            <img src="/ASSETS/imagens/carrossel-3.png" alt="Design 3">
+                        </div>
+                        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+                        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        
+                        <div class="tecnologias-pc">
+                            <div class="css"><img src="/ASSETS/imagens/html5/icons8-html5-480.png" alt="HTML5"></div>
+                            <div class="css"><img src="/ASSETS/imagens/css/icons8-css3-480.png" alt="CSS3"></div>
+                            <div class="css"><img src="/ASSETS/imagens/javascript/icons8-javascript-480.png" alt="JavaScript"></div>
+                            <div class="css"><img src="/ASSETS/imagens/figma/icons8-figma-480.png" alt="Figma"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+  
         </div>
 
         <section id="sobre-mim">
             <section class="background-sobre-mim">
                 <div class="sobre-mim-tilulo">Sobre Mim</div>
             </section>
-            <div class="function">
-                <h1 id="typing-quem-sou"></h1>
-            </div>
+            
 
-            <div class="foto-info">
+            
                     <div class="img-topo">
                         <div class="container-bolha">
                             <div class="bolha"></div>
                             <div class="camada-desfoque"></div>
                         </div>
                         <img class="foto-viviene" src="/ASSETS/imagens/img-topo.png" alt="foto-viviene">
-                </div>
+                    </div>
+                <div class="function">
+                <h1 id="typing-quem-sou"></h1>
+            </div>
         <div class="descricao-eu" data-aos="zoom-in">
             
 
@@ -183,9 +280,16 @@
                 <h2>
                     <section class="sobre-mim">
                         <p>
-                            Sou desenvolvedora front-end com foco em criar soluções digitais funcionais e visualmente impactantes. Curso Análise e Desenvolvimento de Sistemas e tenho experiência com HTML, CSS, JavaScript, React, Figma, Photoshop e Git. Também atuo como designer gráfica, criando conteúdos para redes sociais, landing pages e biolinks. Tenho um olhar criativo, estratégico e voltado para resultados. Meu propósito é transformar ideias em experiências digitais que conectam marcas ao seu público.
-
-
+                            Sou desenvolvedora front-end com foco em criar 
+                            soluções digitais funcionais e visualmente impactantes.
+                            Curso Análise e Desenvolvimento de Sistemas e tenho 
+                            experiência com HTML, CSS, JavaScript, React, Figma, 
+                            Photoshop e Git. Também atuo como designer gráfica,
+                            criando conteúdos para redes sociais, landing pages 
+                            e biolinks. Tenho um olhar criativo, estratégico e 
+                            voltado para resultados. Meu propósito é transformar 
+                            ideias em experiências digitais que conectam marcas 
+                            ao seu público.
                         </p>
                     </section>
                 </h2>
@@ -197,7 +301,7 @@
    
         
 
-        <div class="tecnologias">
+        <div id="tecnologias">
             <div class="titulo-tecnologias">Tecnologias</div>
             <div class="tecnologias-1" data-aos="fade-right">
                 <div class="tec-img" data-tech="HTML5">
@@ -306,7 +410,7 @@
          
 
         <div class="copy">
-            <div class="direitos">© 2024. Todos os direitos reservados à Viviene Diniz</div> 
+            <div class="direitos">© 2025. Todos os direitos reservados à Viviene Diniz</div> 
         </div>
     </div><!--end interface-->
 
@@ -323,5 +427,6 @@
     </script>
     <script src="/ASSETS/javascript/script.js"></script>
     <script src="/functions/form-handler.js"></script>
+    <script src="ASSETS/javascript/menu-toggle.js"></script>
 </body>
 </html>

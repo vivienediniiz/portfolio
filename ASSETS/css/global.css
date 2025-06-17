@@ -34,6 +34,39 @@
     
 }
 
+/* Oculta o menu desktop por padrão */
+.menu-desktop {
+  display: none;
+}
+
+/* Oculta o botão hamburger por padrão */
+.menu-mobile {
+  display: none;
+}
+
+/* TELAS MAIORES QUE 480px (desktop, tablet, etc) */
+@media screen and (min-width: 481px) {
+  .menu-desktop {
+    display: flex; /* ou block, dependendo do seu layout */
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+}
+
+/* TELAS DE ATÉ 480px (celular) */
+@media screen and (max-width: 480px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block; /* ou flex, dependendo do estilo do botão */
+  }
+}
+
+
   
   
 

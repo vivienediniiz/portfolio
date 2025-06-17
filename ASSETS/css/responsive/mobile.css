@@ -1317,10 +1317,6 @@ backdrop-filter: blur(10px);
         padding: var(--space-md); /* espaçamento */
         background: rgba(255, 255, 255, 0.15);
         border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
         width: clamp(280px, 90vw, 100px);
         height: auto;
         min-height: 10px;
@@ -1328,24 +1324,7 @@ backdrop-filter: blur(10px);
         margin-top: var(--space-md);
     }
     
-    #container-formulario::after {
-        content: '';
-        position: absolute;
-        top: -100%;
-        left: -100%;
-        width: 250%;
-        height: 250%;
-        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 70%);
-        opacity: 0.6;
-        transform: rotate(25deg);
-        animation: reflexoEspelho 8s infinite ease-in-out;
-    }
-    
-    @keyframes reflexoEspelho {
-        0% { transform: rotate(25deg) translate(-120%, -120%); opacity: 0.4; }
-        50% { transform: rotate(25deg) translate(0%, 0%); opacity: 0.8; }
-        100% { transform: rotate(25deg) translate(120%, 120%); opacity: 0.4; }
-    }
+
     
     #container-formulario h2 {
         text-align: center;

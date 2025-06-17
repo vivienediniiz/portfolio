@@ -29,6 +29,7 @@
     height: 100%;
     margin: 0px auto;
     z-index: 2000;
+   
  
     
   }
@@ -392,19 +393,25 @@ main {
 /* MAIN */
 #home {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+    background-image: url(/ASSETS/imagens/backfround-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 
 .informacao{
     
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 120px;
+    margin-left: 20px;
+ 
     
 }
 
@@ -421,71 +428,86 @@ main {
 
 
 
-.nome {
-    font-size: 2rem;
-    font-family: var(--font-family-quik);
-    margin-top: 40px;
-}
+.name{
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: var(--font-family-quik);
 
-/* Estiliza os símbolos < e /> */
-.nome span {
-    color: rgba(255, 255, 255, 0.603);
-    font-style: normal;
-    font-size: 1.7rem;
-    font-family: var(--font-family-mono);
-}
-
-/* Estiliza o nome "Viviene Diniz" */
-.nome span.nome-texto {
-    background: var(--novo, linear-gradient(141deg, #F0D 7.69%, #99002F 182.25%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: bold;
-    font-weight: 800;
-    font-size: 2rem;
-    font-family: var(--font-family-quik);
-}
-
-
-
-#typing-effect {
-    font-family: var(--font-family-mono);
-    font-size: 1rem;
-    color: var(--cor5);
-    line-height: 1.5; /* Ajuste conforme necessário */
-}
-
-.cursor {
-    display: inline-block;
-    width: 2px;
-    height: 24px; /* Altura do cursor */
-    background-color: var(--cor4);
-    animation: blink 1s infinite;
-    vertical-align: middle; /* Centraliza verticalmente */
-    position: relative;
-    top: -1px; /* Ajuste fino para alinhamento perfeito */
-}
-
-@keyframes blink {
-    0%, 50% {
-        opacity: 1;
     }
-    50.1%, 100% {
-        opacity: 0;
+    
+    .function {
+        font-family:var(--font-family-mono);
+        
+        
     }
-}
+    
+    .function span {
+        color: rgba(255, 255, 255, 0.603);
+        font-style: normal;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        
+    }
+    
+    .function span.nome-texto {
+        background: var(--novo, linear-gradient(141deg, #F0D 7.69%, #99002F 182.25%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 2rem;
+        
+    }
+    
+    #typing-effect {
+        font-family: var(--font-family-mono);
+        font-weight: 300;
+        color: var(--cor7);
+        margin-top: 1px;
+        font-size: 1.2rem;
+        
+    }
+    
+    .cursor {
+        display: inline-block;
+        width: 2px;
+        height: clamp(18px, 3vw, 24px);
+        background-color: var(--cor7);
+        animation: blink 1s infinite;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+    }
+    
+    @keyframes blink {
+        0%, 50% { opacity: 1; }
+        50.1%, 100% { opacity: 0; }
+    }
+    
+    .frase p {
+        
+        color: #A9A8A8;
+        font-family: Quicksand;
+        --p-size: clamp(0.8rem, 1.5vw, 1rem);
+        font-weight: 600;
+        margin-top: var(--space-md);
+        text-align: left;
+    }
 
-.frase p {
-    color: #A9A8A8;
-    text-align: center;
-    font-family: Quicksand;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-top: 40px;
-}
+.links-home{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .links-home img{
+        width: 30px;
+        height: auto;
+        
+    }
 
 .button {
     display: flex;

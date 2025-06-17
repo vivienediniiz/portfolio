@@ -517,7 +517,7 @@ main {
     /* From Uiverse.io by adamgiebl */ 
   --green: #fd1bb9;
   font-size: 17px;
-  padding: 0.7em 5em;
+  padding: 0.7em 5.2em;
   letter-spacing: 0.06em;
   position: relative;
   font-family: var(--font-family-quik);

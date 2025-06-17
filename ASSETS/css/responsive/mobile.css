@@ -394,7 +394,7 @@ main {
 #home {
     display: flex;
     width: 100%;
-    height: 100vh;  
+    height: 90vh;  
     
 
 }
@@ -598,11 +598,13 @@ main {
 
 /* SETA MAIN */
 .seta-main {
+    width: 100vh;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
     animation: float 3s ease-in-out infinite; /* Aplica a animação */
+    margin-top: 5px;
 }
 
 @keyframes float {

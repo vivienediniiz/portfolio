@@ -534,17 +534,17 @@
     .slides-1 img {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Alterado de 'cover' para 'contain' para evitar cortes */
+        object-fit: cover; /* Alterado de 'cover' para 'contain' para evitar cortes */
         flex-shrink: 0;
-        padding: 30px;
+        
     }
 
     .slides-2 img {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Alterado de 'cover' para 'contain' para evitar cortes */
+        object-fit: cover; /* Alterado de 'cover' para 'contain' para evitar cortes */
         flex-shrink: 0;
-        padding: 30px;
+       
     }
 
     .arrow {
@@ -603,6 +603,26 @@
         background: rgba(255, 255, 255, 0.22);
         backdrop-filter: blur(1.2px);
         color: #FFF;
+    }
+
+    .buttom-projeto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border: none;
+        width: 150px;
+        height: 10px;
+        font-size: 0.7rem;
+        padding: 19px 0 19px 0;
+        font-family: var(--font-family-roboto);
+        cursor: pointer;
+        font-weight: 500;
+        background-color:#f06adc98;
+        color: #000000;
+        
+
+
     }
     
     /* SOBRE MIM */
